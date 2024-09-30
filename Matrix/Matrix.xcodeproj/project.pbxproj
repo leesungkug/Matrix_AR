@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1E0578952C771EE6001E2879 /* upgradeAnimation.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E0578942C771EE6001E2879 /* upgradeAnimation.usdc */; };
-		1E0578972C7727A1001E2879 /* keyboard.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E0578962C7727A1001E2879 /* keyboard.usdc */; };
 		1E0578992C7728F5001E2879 /* MainRoom.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E0578982C7728F5001E2879 /* MainRoom.usdc */; };
 		1E05789B2C772DED001E2879 /* upgradeMap.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E05789A2C772DED001E2879 /* upgradeMap.usdc */; };
 		1E0805502CA4252900AF3E02 /* ARCameraContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08054E2CA4241200AF3E02 /* ARCameraContainer.swift */; };
@@ -21,6 +20,10 @@
 		1E36E8FE2CA4462B00B0038F /* glass2.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E8FD2CA4462B00B0038F /* glass2.usdc */; };
 		1E36E9002CA4463800B0038F /* glass2.scn in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E8FF2CA4463800B0038F /* glass2.scn */; };
 		1E36E9042CA44AEA00B0038F /* glass3.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E9032CA44AEA00B0038F /* glass3.usdc */; };
+		1E36E90B2CAABAF300B0038F /* MainMapOfiice.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E90A2CAABAF300B0038F /* MainMapOfiice.usdc */; };
+		1E36E90D2CAABE4B00B0038F /* whiteroom.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E90C2CAABE4B00B0038F /* whiteroom.usdc */; };
+		1E36E90F2CAABF1A00B0038F /* keyboard.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E90E2CAABF1A00B0038F /* keyboard.usdc */; };
+		1E36E9112CAAC04600B0038F /* popup.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E9102CAAC04600B0038F /* popup.usdc */; };
 		1E38B23D2C86CAC900A912E1 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38B23C2C86CAC900A912E1 /* ARViewContainer.swift */; };
 		1E38B2402C89571400A912E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38B23F2C89571400A912E1 /* Model.swift */; };
 		1EEECCD82C6DF87C00FA1254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEECCD72C6DF87C00FA1254 /* AppDelegate.swift */; };
@@ -33,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		1E0578942C771EE6001E2879 /* upgradeAnimation.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = upgradeAnimation.usdc; sourceTree = "<group>"; };
-		1E0578962C7727A1001E2879 /* keyboard.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = keyboard.usdc; sourceTree = "<group>"; };
 		1E0578982C7728F5001E2879 /* MainRoom.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainRoom.usdc; sourceTree = "<group>"; };
 		1E05789A2C772DED001E2879 /* upgradeMap.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = upgradeMap.usdc; sourceTree = "<group>"; };
 		1E08054E2CA4241200AF3E02 /* ARCameraContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraContainer.swift; sourceTree = "<group>"; };
@@ -46,6 +48,10 @@
 		1E36E8FD2CA4462B00B0038F /* glass2.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = glass2.usdc; sourceTree = "<group>"; };
 		1E36E8FF2CA4463800B0038F /* glass2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = glass2.scn; sourceTree = "<group>"; };
 		1E36E9032CA44AEA00B0038F /* glass3.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = glass3.usdc; sourceTree = "<group>"; };
+		1E36E90A2CAABAF300B0038F /* MainMapOfiice.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainMapOfiice.usdc; sourceTree = "<group>"; };
+		1E36E90C2CAABE4B00B0038F /* whiteroom.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = whiteroom.usdc; sourceTree = "<group>"; };
+		1E36E90E2CAABF1A00B0038F /* keyboard.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = keyboard.usdc; sourceTree = "<group>"; };
+		1E36E9102CAAC04600B0038F /* popup.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = popup.usdc; sourceTree = "<group>"; };
 		1E38B23C2C86CAC900A912E1 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		1E38B23F2C89571400A912E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1EEECCD42C6DF87C00FA1254 /* Matrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,12 +142,15 @@
 			isa = PBXGroup;
 			children = (
 				1EEECCEA2C6E01C200FA1254 /* removeMap.usdc */,
-				1E0578962C7727A1001E2879 /* keyboard.usdc */,
+				1E36E90E2CAABF1A00B0038F /* keyboard.usdc */,
 				1E0578982C7728F5001E2879 /* MainRoom.usdc */,
 				1E2702022C9094660091B33F /* Glass.usdz */,
+				1E36E9102CAAC04600B0038F /* popup.usdc */,
+				1E36E90A2CAABAF300B0038F /* MainMapOfiice.usdc */,
 				1E36E8FB2CA444E400B0038F /* Glass.scn */,
 				1E0805532CA429FC00AF3E02 /* glass1.usdc */,
 				1E36E8F92CA444D100B0038F /* glass1.scn */,
+				1E36E90C2CAABE4B00B0038F /* whiteroom.usdc */,
 				1E36E9032CA44AEA00B0038F /* glass3.usdc */,
 				1EEECCE62C6DFE9B00FA1254 /* map.usdc */,
 				1E05789A2C772DED001E2879 /* upgradeMap.usdc */,
@@ -212,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EEECCDF2C6DF87E00FA1254 /* Preview Assets.xcassets in Resources */,
+				1E36E90F2CAABF1A00B0038F /* keyboard.usdc in Resources */,
 				1E2702012C9092F20091B33F /* gramophone.usdz in Resources */,
 				1E2702032C9094660091B33F /* Glass.usdz in Resources */,
 				1E36E8FC2CA444E400B0038F /* Glass.scn in Resources */,
@@ -221,12 +231,14 @@
 				1EEECCEB2C6E037600FA1254 /* removeMap.usdc in Resources */,
 				1E0578992C7728F5001E2879 /* MainRoom.usdc in Resources */,
 				1E36E8FE2CA4462B00B0038F /* glass2.usdc in Resources */,
-				1E0578972C7727A1001E2879 /* keyboard.usdc in Resources */,
+				1E36E90B2CAABAF300B0038F /* MainMapOfiice.usdc in Resources */,
 				1EEECCDC2C6DF87E00FA1254 /* Assets.xcassets in Resources */,
 				1E0578952C771EE6001E2879 /* upgradeAnimation.usdc in Resources */,
 				1E0805542CA429FD00AF3E02 /* glass1.usdc in Resources */,
 				1E36E9002CA4463800B0038F /* glass2.scn in Resources */,
+				1E36E9112CAAC04600B0038F /* popup.usdc in Resources */,
 				1E36E8FA2CA444D100B0038F /* glass1.scn in Resources */,
+				1E36E90D2CAABE4B00B0038F /* whiteroom.usdc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

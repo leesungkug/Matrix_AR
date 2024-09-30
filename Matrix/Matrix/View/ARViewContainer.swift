@@ -137,7 +137,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
     // 3D 모델 배치 함수
     func placeModel(on planeAnchor: ARPlaneAnchor) {
         // USDC 파일을 로드하여 removeMap 모델 추가
-        if let removeMapEntity = try? ModelEntity.loadModel(named: "MainRoom") {
+        if let removeMapEntity = try? ModelEntity.loadModel(named: "popup") {
 //        if let mapModel = modelData.getModel(named: "MainRoom"), let removeMapEntity = mapModel.modelEntity {
             self.removeMapEntity = removeMapEntity  // 모델을 저장
             
@@ -163,15 +163,15 @@ class ARViewController: UIViewController, ARSessionDelegate {
                 anchorEntity.addChild(keyboardEntity)
             }
             
-            if let glassEntity = try? ModelEntity.loadModel(named: "Glass") {
-                glassEntity.position.y = planeAnchor.center.y
-                glassEntity.name = "glass"
-                glassEntity.generateCollisionShapes(recursive: true)
-                
-                anchorEntity.addChild(glassEntity)
-            } else {
-                print("failed")
-            }
+//            if let glassEntity = try? ModelEntity.loadModel(named: "Glass") {
+//                glassEntity.position.y = planeAnchor.center.y
+//                glassEntity.name = "glass"
+//                glassEntity.generateCollisionShapes(recursive: true)
+//                
+//                anchorEntity.addChild(glassEntity)
+//            } else {
+//                print("failed")
+//            }
             
             // ARView에 AnchorEntity 추가
             arView.scene.addAnchor(anchorEntity)
@@ -204,7 +204,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
     func replaceModel() {
         guard let removeMapEntity = removeMapEntity else { return }
         // 새 모델 로드
-        if let newModelEntity = try? ModelEntity.loadModel(named: "upgradeMap") {
+        if let newModelEntity = try? ModelEntity.loadModel(named: "whiteroom") {
 //        if let newModelEntity = try? Entity.loadModel(named: "upgradeAnimation") {
             // 기존 removeMap 모델을 교체
             removeMapEntity.model = newModelEntity.model
