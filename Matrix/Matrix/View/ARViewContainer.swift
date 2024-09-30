@@ -31,6 +31,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
     var planeAreaText: Binding<String>?
     var isArea: Binding<Bool>?
     var removeMapEntity: ModelEntity?
+    var anchorEntity : AnchorEntity?
     var cancellables = Set<AnyCancellable>()
     let minArea: Float = 10.0
     
@@ -137,15 +138,15 @@ class ARViewController: UIViewController, ARSessionDelegate {
     // 3D 모델 배치 함수
     func placeModel(on planeAnchor: ARPlaneAnchor) {
         // USDC 파일을 로드하여 removeMap 모델 추가
-        if let removeMapEntity = try? ModelEntity.loadModel(named: "popup") {
+        if let removeMapEntity = try? ModelEntity.loadModel(named: "keyboardnone") {
 //        if let mapModel = modelData.getModel(named: "MainRoom"), let removeMapEntity = mapModel.modelEntity {
             self.removeMapEntity = removeMapEntity  // 모델을 저장
             
             // AnchorEntity 생성
-            let anchorEntity = AnchorEntity(anchor: planeAnchor)
+            anchorEntity = AnchorEntity(anchor: planeAnchor)
             
             // removeMap 모델을 AnchorEntity에 추가
-            anchorEntity.addChild(removeMapEntity)
+            anchorEntity!.addChild(removeMapEntity)
             
             // removeMap 모델 위치를 평면의 중심으로 설정
             print("원래 \(removeMapEntity.position), 바닥\(planeAnchor.center)")
@@ -160,7 +161,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
                 // CollisionComponent 추가
                 keyboardEntity.generateCollisionShapes(recursive: true)
                 
-                anchorEntity.addChild(keyboardEntity)
+                anchorEntity!.addChild(keyboardEntity)
             }
             
 //            if let glassEntity = try? ModelEntity.loadModel(named: "Glass") {
@@ -174,7 +175,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
 //            }
             
             // ARView에 AnchorEntity 추가
-            arView.scene.addAnchor(anchorEntity)
+            arView.scene.addAnchor(anchorEntity!)
         } else {
             print("Error: load Failed")
         }
@@ -208,7 +209,9 @@ class ARViewController: UIViewController, ARSessionDelegate {
 //        if let newModelEntity = try? Entity.loadModel(named: "upgradeAnimation") {
             // 기존 removeMap 모델을 교체
             removeMapEntity.model = newModelEntity.model
-
+            if let entityToRemove = anchorEntity!.findEntity(named: "trigger") {
+                entityToRemove.removeFromParent()
+            }
         }
     }
 }
