@@ -1,0 +1,113 @@
+{
+  "76E30F98-AA8E-4B5F-A671-61507BDBD094" : {
+    "objectMetadataList" : [
+      [
+        "76E30F98-AA8E-4B5F-A671-61507BDBD094",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "C7F3A30E-E9F6-46A4-8691-975B2E3AE36B" : {
+    "objectMetadataList" : [
+      [
+        "C7F3A30E-E9F6-46A4-8691-975B2E3AE36B",
+        "root",
+        "scene",
+        "Meshes",
+        "Sketchfab_model",
+        "d555666678c34d9bba863776e4f98545_fbx"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "C7F3A30E-E9F6-46A4-8691-975B2E3AE36B",
+        "root",
+        "scene",
+        "Meshes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "C7F3A30E-E9F6-46A4-8691-975B2E3AE36B",
+        "root",
+        "scene",
+        "Meshes",
+        "Sketchfab_model",
+        "d555666678c34d9bba863776e4f98545_fbx",
+        "RootNode",
+        "Plane_002"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "C7F3A30E-E9F6-46A4-8691-975B2E3AE36B",
+        "root",
+        "scene",
+        "Meshes",
+        "Sketchfab_model"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "C7F3A30E-E9F6-46A4-8691-975B2E3AE36B",
+        "root",
+        "scene",
+        "Meshes",
+        "Sketchfab_model",
+        "d555666678c34d9bba863776e4f98545_fbx",
+        "RootNode"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "C7F3A30E-E9F6-46A4-8691-975B2E3AE36B",
+        "root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "C7F3A30E-E9F6-46A4-8691-975B2E3AE36B",
+        "root",
+        "scene",
+        "Meshes",
+        "Sketchfab_model",
+        "d555666678c34d9bba863776e4f98545_fbx",
+        "RootNode",
+        "Plane_002",
+        "Plane_002_glass_0"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "E3643E68-2D49-4607-8E53-A15A39F49BD9" : {
+    "objectMetadataList" : [
+      [
+        "E3643E68-2D49-4607-8E53-A15A39F49BD9",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}
