@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0756521A2CAB4DBC00D567BA /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075652192CAB4DBC00D567BA /* InfoView.swift */; };
 		1E0578952C771EE6001E2879 /* upgradeAnimation.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E0578942C771EE6001E2879 /* upgradeAnimation.usdc */; };
 		1E0578992C7728F5001E2879 /* MainRoom.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E0578982C7728F5001E2879 /* MainRoom.usdc */; };
 		1E05789B2C772DED001E2879 /* upgradeMap.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E05789A2C772DED001E2879 /* upgradeMap.usdc */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		075652192CAB4DBC00D567BA /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		1E0578942C771EE6001E2879 /* upgradeAnimation.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = upgradeAnimation.usdc; sourceTree = "<group>"; };
 		1E0578982C7728F5001E2879 /* MainRoom.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainRoom.usdc; sourceTree = "<group>"; };
 		1E05789A2C772DED001E2879 /* upgradeMap.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = upgradeMap.usdc; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				1EEECCD92C6DF87C00FA1254 /* ContentView.swift */,
 				1E38B23C2C86CAC900A912E1 /* ARViewContainer.swift */,
 				1E08054E2CA4241200AF3E02 /* ARCameraContainer.swift */,
+				075652192CAB4DBC00D567BA /* InfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				1EEECCD82C6DF87C00FA1254 /* AppDelegate.swift in Sources */,
 				1E38B23D2C86CAC900A912E1 /* ARViewContainer.swift in Sources */,
 				1E38B2402C89571400A912E1 /* Model.swift in Sources */,
+				0756521A2CAB4DBC00D567BA /* InfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Matrix/Preview Content\"";
-				DEVELOPMENT_TEAM = AQCS8SYVV6;
+				DEVELOPMENT_TEAM = 523G4MTV48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -423,7 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Matrix/Preview Content\"";
-				DEVELOPMENT_TEAM = AQCS8SYVV6;
+				DEVELOPMENT_TEAM = 523G4MTV48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
