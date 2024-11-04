@@ -13,11 +13,13 @@ import SwiftUI
 struct ARViewContainer: UIViewControllerRepresentable {
     @Binding var planeAreaText: String
     @Binding var isArea: Bool
+    @Binding var isLoading: Bool
     
     func makeUIViewController(context: Context) -> ARViewController {
         let controller = ARViewController()
         controller.planeAreaText = $planeAreaText
         controller.isArea = $isArea
+        controller.isLoading = $isLoading
         return controller
     }
     
@@ -30,10 +32,14 @@ class ARViewController: UIViewController, ARSessionDelegate {
     var modelPlaced = false
     var planeAreaText: Binding<String>?
     var isArea: Binding<Bool>?
+    var isLoading: Binding<Bool>?
     var removeMapEntity: ModelEntity?
     var anchorEntity : AnchorEntity?
     var cancellables = Set<AnyCancellable>()
-    let minArea: Float = 10.0
+    let minArea: Float = 8.0
+    let stageMaps = ["office", "whiteroom"]
+    let triggers = ["keyboard", "whitepill"]
+    var stageIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +93,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
     // 평면 감지 시 호출되는 함수
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
         guard !modelPlaced else { return }
+        print("평면 찾는 중")
         for anchor in anchors {
             if let planeAnchor = anchor as? ARPlaneAnchor {
                 // 평면의 넓이를 계산
@@ -101,10 +108,12 @@ class ARViewController: UIViewController, ARSessionDelegate {
                 if area >= minArea {
                     DispatchQueue.main.async {
                         self.isArea?.wrappedValue = true
+                        self.isLoading?.wrappedValue = true
                     }
+                    
                     placeModel(on: planeAnchor)
                     modelPlaced = true
-                    break
+                    return
                 }
             }
         }
@@ -135,47 +144,51 @@ class ARViewController: UIViewController, ARSessionDelegate {
         return area
     }
     
+    func loadModelEntity(name: String) -> ModelEntity? {
+        let modelEntity = try? ModelEntity.loadModel(named: name)
+        
+        return modelEntity
+    }
+    
     // 3D 모델 배치 함수
     func placeModel(on planeAnchor: ARPlaneAnchor) {
         // USDC 파일을 로드하여 removeMap 모델 추가
-        if let removeMapEntity = try? ModelEntity.loadModel(named: "keyboardnone") {
-//        if let mapModel = modelData.getModel(named: "MainRoom"), let removeMapEntity = mapModel.modelEntity {
-            self.removeMapEntity = removeMapEntity  // 모델을 저장
+        if let removeMapEntity = loadModelEntity(name: stageMaps[stageIndex]) {
             
+            //        if let mapModel = modelData.getModel(named: "MainRoom"), let removeMapEntity = mapModel.modelEntity {
+            self.removeMapEntity = removeMapEntity
+            print("모델 위치")
             // AnchorEntity 생성
-            anchorEntity = AnchorEntity(anchor: planeAnchor)
-            
+            self.anchorEntity = AnchorEntity(anchor: planeAnchor)
+            print("앵커 위치\(String(describing: anchorEntity?.position))")
             // removeMap 모델을 AnchorEntity에 추가
-            anchorEntity!.addChild(removeMapEntity)
+            self.anchorEntity?.addChild(removeMapEntity)
             
-            // removeMap 모델 위치를 평면의 중심으로 설정
             print("원래 \(removeMapEntity.position), 바닥\(planeAnchor.center)")
             removeMapEntity.position.y = planeAnchor.center.y
-            // CollisionComponent 추가
             
             // keyboard 모델 추가
-            if let keyboardEntity = try? ModelEntity.loadModel(named: "keyboard") {
-//            if let triggerModel = modelData.getModel(named: "keyboard"), let keyboardEntity = triggerModel.modelEntity {
-                keyboardEntity.position.y = planeAnchor.center.y
-                keyboardEntity.name = "trigger"
-                // CollisionComponent 추가
-                keyboardEntity.generateCollisionShapes(recursive: true)
+            if let triggerEntity = try? ModelEntity.loadModel(named: triggers[stageIndex]) {
+                //            if let triggerModel = modelData.getModel(named: "keyboard"), let keyboardEntity = triggerModel.modelEntity {
+                triggerEntity.position.y = planeAnchor.center.y
+                triggerEntity.name = "trigger"
+                triggerEntity.generateCollisionShapes(recursive: true)
                 
-                anchorEntity!.addChild(keyboardEntity)
+                self.anchorEntity!.addChild(triggerEntity)
             }
             
-//            if let glassEntity = try? ModelEntity.loadModel(named: "Glass") {
-//                glassEntity.position.y = planeAnchor.center.y
-//                glassEntity.name = "glass"
-//                glassEntity.generateCollisionShapes(recursive: true)
-//                
-//                anchorEntity.addChild(glassEntity)
-//            } else {
-//                print("failed")
-//            }
+            //            if let glassEntity = try? ModelEntity.loadModel(named: "Glass") {
+            //                glassEntity.position.y = planeAnchor.center.y
+            //                glassEntity.name = "glass"
+            //                glassEntity.generateCollisionShapes(recursive: true)
+            //
+            //                anchorEntity.addChild(glassEntity)
+            //            } else {
+            //                print("failed")
+            //            }
             
             // ARView에 AnchorEntity 추가
-            arView.scene.addAnchor(anchorEntity!)
+            arView.scene.addAnchor(self.anchorEntity!)
         } else {
             print("Error: load Failed")
         }
@@ -188,11 +201,13 @@ class ARViewController: UIViewController, ARSessionDelegate {
         // 터치된 위치에서 엔티티 검색
         if let tappedEntity = arView.entity(at: location) {
             if tappedEntity.name == "trigger" {
-                // keyboardEntity가 직접 터치된 경우
                 print("Keyboard entity tapped")
+                DispatchQueue.main.async {
+                    self.isLoading?.wrappedValue = true
+                }
                 replaceModel()
             } else if tappedEntity.name == "glass"{
-                
+                print("Tapped glass'")
             } else {
                 print("Tapped entity is not 'keyboard'")
             }
@@ -203,14 +218,30 @@ class ARViewController: UIViewController, ARSessionDelegate {
     
     // 모델 교체 함수
     func replaceModel() {
-        guard let removeMapEntity = removeMapEntity else { return }
+        guard removeMapEntity != nil else { return }
+        if stageIndex < stageMaps.count - 1 {
+            stageIndex += 1
+        } else {
+            stageIndex = 0
+        }
+        print("\(stageIndex)")
+        print("\(stageMaps[stageIndex])")
         // 새 모델 로드
-        if let newModelEntity = try? ModelEntity.loadModel(named: "whiteroom") {
+        if let newStageModelEntity = try? ModelEntity.loadModel(named: stageMaps[stageIndex]) {
 //        if let newModelEntity = try? Entity.loadModel(named: "upgradeAnimation") {
             // 기존 removeMap 모델을 교체
-            removeMapEntity.model = newModelEntity.model
+            self.removeMapEntity?.model = newStageModelEntity.model
+            print("\(triggers[stageIndex])")
             if let entityToRemove = anchorEntity!.findEntity(named: "trigger") {
                 entityToRemove.removeFromParent()
+
+                if let newTriggerModelEntity = try? ModelEntity.loadModel(named: triggers[stageIndex]) {
+                    newStageModelEntity.position.y = newStageModelEntity.position.y
+                    newTriggerModelEntity.name = "trigger"
+                    newTriggerModelEntity.generateCollisionShapes(recursive: true)
+                    
+                    self.anchorEntity!.addChild(newTriggerModelEntity)
+                }
             }
         }
     }

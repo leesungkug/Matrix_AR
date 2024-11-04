@@ -8,63 +8,51 @@
 
 /* Begin PBXBuildFile section */
 		0756521A2CAB4DBC00D567BA /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075652192CAB4DBC00D567BA /* InfoView.swift */; };
-		1E0578952C771EE6001E2879 /* upgradeAnimation.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E0578942C771EE6001E2879 /* upgradeAnimation.usdc */; };
-		1E0578992C7728F5001E2879 /* MainRoom.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E0578982C7728F5001E2879 /* MainRoom.usdc */; };
-		1E05789B2C772DED001E2879 /* upgradeMap.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E05789A2C772DED001E2879 /* upgradeMap.usdc */; };
 		1E0805502CA4252900AF3E02 /* ARCameraContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08054E2CA4241200AF3E02 /* ARCameraContainer.swift */; };
-		1E0805542CA429FD00AF3E02 /* glass1.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E0805532CA429FC00AF3E02 /* glass1.usdc */; };
-		1E2701FF2C9082E50091B33F /* ARView_Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2701FE2C9082E50091B33F /* ARView_Ex.swift */; };
-		1E2702012C9092F20091B33F /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1E2702002C9092F20091B33F /* gramophone.usdz */; };
+		1E2701FF2C9082E50091B33F /* ARView+overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2701FE2C9082E50091B33F /* ARView+overlay.swift */; };
 		1E2702032C9094660091B33F /* Glass.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 1E2702022C9094660091B33F /* Glass.usdz */; };
-		1E36E8FA2CA444D100B0038F /* glass1.scn in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E8F92CA444D100B0038F /* glass1.scn */; };
 		1E36E8FC2CA444E400B0038F /* Glass.scn in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E8FB2CA444E400B0038F /* Glass.scn */; };
 		1E36E8FE2CA4462B00B0038F /* glass2.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E8FD2CA4462B00B0038F /* glass2.usdc */; };
 		1E36E9002CA4463800B0038F /* glass2.scn in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E8FF2CA4463800B0038F /* glass2.scn */; };
-		1E36E9042CA44AEA00B0038F /* glass3.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E9032CA44AEA00B0038F /* glass3.usdc */; };
-		1E36E90B2CAABAF300B0038F /* MainMapOfiice.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E90A2CAABAF300B0038F /* MainMapOfiice.usdc */; };
-		1E36E90D2CAABE4B00B0038F /* whiteroom.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E90C2CAABE4B00B0038F /* whiteroom.usdc */; };
-		1E36E90F2CAABF1A00B0038F /* keyboard.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E90E2CAABF1A00B0038F /* keyboard.usdc */; };
-		1E36E9112CAAC04600B0038F /* popup.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E9102CAAC04600B0038F /* popup.usdc */; };
-		1E36E9132CAAC3F400B0038F /* keyboardnone.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E36E9122CAAC3F400B0038F /* keyboardnone.usdc */; };
 		1E38B23D2C86CAC900A912E1 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38B23C2C86CAC900A912E1 /* ARViewContainer.swift */; };
 		1E38B2402C89571400A912E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E38B23F2C89571400A912E1 /* Model.swift */; };
+		1E7590102CD8B6B20050D10D /* office.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E75900F2CD8B6B20050D10D /* office.usdc */; };
+		1E7590122CD8B7060050D10D /* keyboard.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1E7590112CD8B7060050D10D /* keyboard.usdc */; };
+		1E7590152CD9034B0050D10D /* UIImageView+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7590142CD9033B0050D10D /* UIImageView+GIF.swift */; };
+		1E7590172CD903880050D10D /* GIFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7590162CD903880050D10D /* GIFImageView.swift */; };
+		1E75901A2CD903CD0050D10D /* matrixCode.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1E7590192CD903CD0050D10D /* matrixCode.gif */; };
+		1E75901C2CD90B780050D10D /* CodeGIF.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1E75901B2CD90B780050D10D /* CodeGIF.gif */; };
+		1EDAE4172CD3993300C58565 /* whiteroom.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAE4162CD3993300C58565 /* whiteroom.usdc */; };
+		1EDAE4192CD3994300C58565 /* whitepill.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAE4182CD3994300C58565 /* whitepill.usdc */; };
 		1EEECCD82C6DF87C00FA1254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEECCD72C6DF87C00FA1254 /* AppDelegate.swift */; };
 		1EEECCDA2C6DF87C00FA1254 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEECCD92C6DF87C00FA1254 /* ContentView.swift */; };
 		1EEECCDC2C6DF87E00FA1254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEECCDB2C6DF87E00FA1254 /* Assets.xcassets */; };
 		1EEECCDF2C6DF87E00FA1254 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEECCDE2C6DF87E00FA1254 /* Preview Assets.xcassets */; };
-		1EEECCE72C6DFE9B00FA1254 /* map.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1EEECCE62C6DFE9B00FA1254 /* map.usdc */; };
-		1EEECCEB2C6E037600FA1254 /* removeMap.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 1EEECCEA2C6E01C200FA1254 /* removeMap.usdc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		075652192CAB4DBC00D567BA /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
-		1E0578942C771EE6001E2879 /* upgradeAnimation.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = upgradeAnimation.usdc; sourceTree = "<group>"; };
-		1E0578982C7728F5001E2879 /* MainRoom.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainRoom.usdc; sourceTree = "<group>"; };
-		1E05789A2C772DED001E2879 /* upgradeMap.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = upgradeMap.usdc; sourceTree = "<group>"; };
 		1E08054E2CA4241200AF3E02 /* ARCameraContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraContainer.swift; sourceTree = "<group>"; };
-		1E0805532CA429FC00AF3E02 /* glass1.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = glass1.usdc; sourceTree = "<group>"; };
-		1E2701FE2C9082E50091B33F /* ARView_Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView_Ex.swift; sourceTree = "<group>"; };
-		1E2702002C9092F20091B33F /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
+		1E2701FE2C9082E50091B33F /* ARView+overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARView+overlay.swift"; sourceTree = "<group>"; };
 		1E2702022C9094660091B33F /* Glass.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Glass.usdz; sourceTree = "<group>"; };
-		1E36E8F92CA444D100B0038F /* glass1.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = glass1.scn; sourceTree = "<group>"; };
 		1E36E8FB2CA444E400B0038F /* Glass.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Glass.scn; sourceTree = "<group>"; };
 		1E36E8FD2CA4462B00B0038F /* glass2.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = glass2.usdc; sourceTree = "<group>"; };
 		1E36E8FF2CA4463800B0038F /* glass2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = glass2.scn; sourceTree = "<group>"; };
-		1E36E9032CA44AEA00B0038F /* glass3.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = glass3.usdc; sourceTree = "<group>"; };
-		1E36E90A2CAABAF300B0038F /* MainMapOfiice.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainMapOfiice.usdc; sourceTree = "<group>"; };
-		1E36E90C2CAABE4B00B0038F /* whiteroom.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = whiteroom.usdc; sourceTree = "<group>"; };
-		1E36E90E2CAABF1A00B0038F /* keyboard.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = keyboard.usdc; sourceTree = "<group>"; };
-		1E36E9102CAAC04600B0038F /* popup.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = popup.usdc; sourceTree = "<group>"; };
-		1E36E9122CAAC3F400B0038F /* keyboardnone.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = keyboardnone.usdc; sourceTree = "<group>"; };
 		1E38B23C2C86CAC900A912E1 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		1E38B23F2C89571400A912E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1E75900F2CD8B6B20050D10D /* office.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = office.usdc; sourceTree = "<group>"; };
+		1E7590112CD8B7060050D10D /* keyboard.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = keyboard.usdc; sourceTree = "<group>"; };
+		1E7590142CD9033B0050D10D /* UIImageView+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+GIF.swift"; sourceTree = "<group>"; };
+		1E7590162CD903880050D10D /* GIFImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFImageView.swift; sourceTree = "<group>"; };
+		1E7590192CD903CD0050D10D /* matrixCode.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = matrixCode.gif; sourceTree = "<group>"; };
+		1E75901B2CD90B780050D10D /* CodeGIF.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = CodeGIF.gif; sourceTree = "<group>"; };
+		1EDAE4162CD3993300C58565 /* whiteroom.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = whiteroom.usdc; sourceTree = "<group>"; };
+		1EDAE4182CD3994300C58565 /* whitepill.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = whitepill.usdc; sourceTree = "<group>"; };
 		1EEECCD42C6DF87C00FA1254 /* Matrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEECCD72C6DF87C00FA1254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EEECCD92C6DF87C00FA1254 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EEECCDB2C6DF87E00FA1254 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EEECCDE2C6DF87E00FA1254 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1EEECCE62C6DFE9B00FA1254 /* map.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = map.usdc; sourceTree = "<group>"; };
-		1EEECCEA2C6E01C200FA1254 /* removeMap.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = removeMap.usdc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +69,8 @@
 		1E2701FD2C9082CB0091B33F /* extention */ = {
 			isa = PBXGroup;
 			children = (
-				1E2701FE2C9082E50091B33F /* ARView_Ex.swift */,
+				1E2701FE2C9082E50091B33F /* ARView+overlay.swift */,
+				1E7590142CD9033B0050D10D /* UIImageView+GIF.swift */,
 			);
 			path = extention;
 			sourceTree = "<group>";
@@ -91,6 +80,7 @@
 			children = (
 				1EEECCD92C6DF87C00FA1254 /* ContentView.swift */,
 				1E38B23C2C86CAC900A912E1 /* ARViewContainer.swift */,
+				1E7590162CD903880050D10D /* GIFImageView.swift */,
 				1E08054E2CA4241200AF3E02 /* ARCameraContainer.swift */,
 				075652192CAB4DBC00D567BA /* InfoView.swift */,
 			);
@@ -103,6 +93,15 @@
 				1E38B23F2C89571400A912E1 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1E7590182CD903C50050D10D /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				1E7590192CD903CD0050D10D /* matrixCode.gif */,
+				1E75901B2CD90B780050D10D /* CodeGIF.gif */,
+			);
+			path = GIF;
 			sourceTree = "<group>";
 		};
 		1EEECCCB2C6DF87C00FA1254 = {
@@ -146,24 +145,15 @@
 		1EEECCE52C6DFE7A00FA1254 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				1EEECCEA2C6E01C200FA1254 /* removeMap.usdc */,
-				1E36E90E2CAABF1A00B0038F /* keyboard.usdc */,
-				1E0578982C7728F5001E2879 /* MainRoom.usdc */,
+				1E75900F2CD8B6B20050D10D /* office.usdc */,
+				1E7590182CD903C50050D10D /* GIF */,
 				1E2702022C9094660091B33F /* Glass.usdz */,
-				1E36E9102CAAC04600B0038F /* popup.usdc */,
-				1E36E90A2CAABAF300B0038F /* MainMapOfiice.usdc */,
 				1E36E8FB2CA444E400B0038F /* Glass.scn */,
-				1E36E9122CAAC3F400B0038F /* keyboardnone.usdc */,
-				1E0805532CA429FC00AF3E02 /* glass1.usdc */,
-				1E36E8F92CA444D100B0038F /* glass1.scn */,
-				1E36E90C2CAABE4B00B0038F /* whiteroom.usdc */,
-				1E36E9032CA44AEA00B0038F /* glass3.usdc */,
-				1EEECCE62C6DFE9B00FA1254 /* map.usdc */,
-				1E05789A2C772DED001E2879 /* upgradeMap.usdc */,
+				1E7590112CD8B7060050D10D /* keyboard.usdc */,
+				1EDAE4162CD3993300C58565 /* whiteroom.usdc */,
+				1EDAE4182CD3994300C58565 /* whitepill.usdc */,
 				1E36E8FD2CA4462B00B0038F /* glass2.usdc */,
 				1E36E8FF2CA4463800B0038F /* glass2.scn */,
-				1E2702002C9092F20091B33F /* gramophone.usdz */,
-				1E0578942C771EE6001E2879 /* upgradeAnimation.usdc */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -226,26 +216,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E75901C2CD90B780050D10D /* CodeGIF.gif in Resources */,
 				1EEECCDF2C6DF87E00FA1254 /* Preview Assets.xcassets in Resources */,
-				1E36E90F2CAABF1A00B0038F /* keyboard.usdc in Resources */,
-				1E2702012C9092F20091B33F /* gramophone.usdz in Resources */,
-				1E36E9132CAAC3F400B0038F /* keyboardnone.usdc in Resources */,
 				1E2702032C9094660091B33F /* Glass.usdz in Resources */,
 				1E36E8FC2CA444E400B0038F /* Glass.scn in Resources */,
-				1E05789B2C772DED001E2879 /* upgradeMap.usdc in Resources */,
-				1E36E9042CA44AEA00B0038F /* glass3.usdc in Resources */,
-				1EEECCE72C6DFE9B00FA1254 /* map.usdc in Resources */,
-				1EEECCEB2C6E037600FA1254 /* removeMap.usdc in Resources */,
-				1E0578992C7728F5001E2879 /* MainRoom.usdc in Resources */,
+				1E7590122CD8B7060050D10D /* keyboard.usdc in Resources */,
+				1EDAE4172CD3993300C58565 /* whiteroom.usdc in Resources */,
 				1E36E8FE2CA4462B00B0038F /* glass2.usdc in Resources */,
-				1E36E90B2CAABAF300B0038F /* MainMapOfiice.usdc in Resources */,
+				1E7590102CD8B6B20050D10D /* office.usdc in Resources */,
 				1EEECCDC2C6DF87E00FA1254 /* Assets.xcassets in Resources */,
-				1E0578952C771EE6001E2879 /* upgradeAnimation.usdc in Resources */,
-				1E0805542CA429FD00AF3E02 /* glass1.usdc in Resources */,
+				1EDAE4192CD3994300C58565 /* whitepill.usdc in Resources */,
+				1E75901A2CD903CD0050D10D /* matrixCode.gif in Resources */,
 				1E36E9002CA4463800B0038F /* glass2.scn in Resources */,
-				1E36E9112CAAC04600B0038F /* popup.usdc in Resources */,
-				1E36E8FA2CA444D100B0038F /* glass1.scn in Resources */,
-				1E36E90D2CAABE4B00B0038F /* whiteroom.usdc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,11 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E2701FF2C9082E50091B33F /* ARView_Ex.swift in Sources */,
+				1E7590172CD903880050D10D /* GIFImageView.swift in Sources */,
+				1E2701FF2C9082E50091B33F /* ARView+overlay.swift in Sources */,
 				1E0805502CA4252900AF3E02 /* ARCameraContainer.swift in Sources */,
 				1EEECCDA2C6DF87C00FA1254 /* ContentView.swift in Sources */,
 				1EEECCD82C6DF87C00FA1254 /* AppDelegate.swift in Sources */,
 				1E38B23D2C86CAC900A912E1 /* ARViewContainer.swift in Sources */,
+				1E7590152CD9034B0050D10D /* UIImageView+GIF.swift in Sources */,
 				1E38B2402C89571400A912E1 /* Model.swift in Sources */,
 				0756521A2CAB4DBC00D567BA /* InfoView.swift in Sources */,
 			);
@@ -396,7 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Matrix/Preview Content\"";
-				DEVELOPMENT_TEAM = 523G4MTV48;
+				DEVELOPMENT_TEAM = AQCS8SYVV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -427,7 +411,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Matrix/Preview Content\"";
-				DEVELOPMENT_TEAM = 523G4MTV48;
+				DEVELOPMENT_TEAM = AQCS8SYVV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";

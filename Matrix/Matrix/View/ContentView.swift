@@ -9,6 +9,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var planeAreaText: String = "Detecting plane area..."
     @State var isArea = false
+    @State var isLoading = false
     @State private var currentImageIndex = 0 // 현재 보여줄 이미지의 인덱스
     let images = ["sunglass1", "sunglass2", "sunglass3"] // 이미지 에셋 이름 배열
     @State private var showText = false // 텍스트 표시 여부 상태 추가
@@ -18,9 +19,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                ARViewContainer(planeAreaText: $planeAreaText, isArea: $isArea)
+                ARViewContainer(planeAreaText: $planeAreaText, isArea: $isArea, isLoading: $isLoading)
                     .ignoresSafeArea()
-
+                
+                if isLoading {
+                    GIFImageView(name: "CodeGIF")
+                        .ignoresSafeArea()
+                }
+                
                 if !isArea {
                     if !showText {
                         NavigationLink(destination: InfoView(isInInfoView: $isInInfoView)) {
@@ -83,6 +89,14 @@ struct ContentView: View {
             }
         }
         .ignoresSafeArea()
+        .onChange(of: isLoading, {
+            print("바뀜 \(isLoading)")
+            if isLoading {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    isLoading = false
+                }
+            }
+        })
         .onDisappear {
             timer?.invalidate()
         }
